@@ -15,7 +15,7 @@ lt.from(".centre h1",{
     duration: 0.6,
     y: -150
 }, "-=0.4")
-.from(".container>h1",{
+.from(".page1>h1",{
     opacity: 0,
     duration: 0.7,
     y: 40,
@@ -34,7 +34,15 @@ lt.from(".centre h1",{
 .to("#img2",{ rotate: -25, duration: 0.4 })
 .to("#img1",{ rotate: -30, duration: 0.4 });
 
-gsap.from(".menu",{
-    x:0,
-    opacity:1
+gsap.to(".page2 h1",{
+    transform:"translateX(-170%)",
+    scrollTrigger:{
+        trigger:".page2",
+        scroller:"body",
+        markers:true,
+        start:"top 0%",
+        end:"top -100%",
+        scrub:3,
+        pin:true
+    }
 })
