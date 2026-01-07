@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event-Project2</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: rgb(255, 0, 0);
+        text-decoration: 2px double underline red;
+      }
+      select {
+        padding: 10px;
+        background-color: blue;
+        color: aliceblue;
+        border-radius: 20px 0 20px 0;
+      }
+      option {
+        background-color: aqua;
+        color: brown;
+      }
+      h2{
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Case Lelo!</h1>
+    <h2>Enter The Brand</h2>
+    <select name="" id="">
+      <option value="" selected disabled>Select</option>
+      <option value="apple">Apple</option>
+      <option value="samsung">Samsung</option>
+      <option value="oppo">Oppo</option>
+      <option value="pixel">Pixel</option>
+      <option value="xiomi">Xiomi</option>
+      <option value="oneplus">Oneplus</option>
+    </select>
+    <script>
+        let select = document.querySelector("select");
+        let h2 = document.querySelector("h2");
+        select.addEventListener("change",function (info){
+        h2.textContent = `${info.target.value} Phone Selected!`;
+
+        });
+    </script>
+  </body>
+</html>
